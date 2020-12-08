@@ -4,13 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.function.BiPredicate;
-import java.util.function.Predicate;
 
 public class Node {
-    private List<Node> children = new ArrayList<>();
-    private Type type;
-    private int startPos;
-    private int endPos;
+    public List<Node> children = new ArrayList<>();
+    public Type type;
+    public int startPos;
+    public int endPos;
 
     public static List<Node> extract(List<Atom> atoms, int current, BiPredicate<Integer, Integer> done, int currentDepth) {
         final var nodes = new ArrayList<Node>();
